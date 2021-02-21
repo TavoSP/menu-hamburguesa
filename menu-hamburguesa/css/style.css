@@ -39,6 +39,7 @@ html {
 }
 
 body {
+  width: 100%;
   margin: 0;
   overflow-x: hidden;
   color: var(--text-color);
@@ -50,6 +51,7 @@ ul {
 
 .header {
   width: 100%;
+  border: 1px solid red;
 }
 
 .header__nav {
@@ -87,6 +89,10 @@ a.menu__links {
 
 /*------Boton Hamburguesa------*/
 
+.header__toggle {
+  z-index: 100;
+}
+
 .header__toggle > span {
   display: block;
   width: 26px;
@@ -107,7 +113,9 @@ a.menu__links {
     transform: translate(0, 0);
 } */
 .menu__container-mobile{
-  width: 100vw;
+  visibility: hidden;
+  border: 1px solid red;
+  width: 100%;
   left: 0;
   right: 0;
   top: 65px;
@@ -120,7 +128,7 @@ a.menu__links {
 .menu__mobile {
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   background-color: rgba(255,255,255, 0.75);
   display: flex;
   flex-direction: column;
