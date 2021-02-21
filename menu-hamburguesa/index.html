@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Menu Hamburguesa by Tavo</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <div class="logo-container">
+        <img src="/tslogo.png" height="50px" width="50px" alt="Logo" class="logo-img" />
+      </div>
+
+      <!--       Menu Hamburguesa-Mobile  -->
+      <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <!--       Menu Desktop >1024px  -->
+      <ul class="menu hide-for-mobile">
+        <li><a class="menu__links" href="#">Inicio</a></li>
+        <li><a class="menu__links" href="#">Acerca</a></li>
+        <li><a class="menu__links" href="#">Proyectos</a></li>
+        <li><a class="menu__links" href="#">Contacto</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="menu__container-mobile panel hide-for-desktop">
+          <ul class="menu__mobile">
+        <li><a class="mobile__links" href="#">Inicio</a></li>
+        <li><a class="mobile__links" href="#">Acerca</a></li>
+        <li><a class="mobile__links" href="#">Proyectos</a></li>
+        <li><a class="mobile__links" href="#">Contacto</a></li>
+  </div>
+  
+<script src="/app.js"></script>
+</body>
+</html>

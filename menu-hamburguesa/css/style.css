@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap');
+
+/* ********** Custom Properties ********** */
+:root {
+  --first-color: #ffca28;
+  --first-alpha-color: rgba(255, 202, 40, 0.75);
+  --second-color: #263238;
+  --second-alpha-color: rgba(38, 50, 56, 0.75);
+  --third-color: #501464;
+  --third-alpha-color: rgba(80, 20, 100, 0.75);
+  --white-color: #fff;
+  --gray-light-color: #f3f3f3;
+  --gray-color: #ccc;
+  --gray-dark-color: #666;
+  --black-color: #000;
+  --link-color: #509ee3;
+  --title-color: #333;
+  --text-color: #222;
+  --white-alpha-color: rgba(255, 255, 255, 0.5);
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --font: 'Nunito Sans', sans-serif;
+  --max-width: 1200px;
+  --header-height: 4rem;
+}
+
+/* ********** Reset ********** */
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  outline: 0;;
+}
+
+*,
+*::after,
+*::before { 
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  width: 100%;
+}
+
+.header__nav {
+  border: 1px solid red;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li{
+  display: inline-block;
+}
+
+a.menu__links {
+  text-decoration: none;
+  color: var(--second-color);
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.header.open .header__toggle > span:first-child {
+          transform: rotate(45deg);
+}
+
+.header.open .header__toggle > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__toggle > span:last-child {
+                transform: rotate(-45deg);
+}
+
+/*------Boton Hamburguesa------*/
+
+.header__toggle > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #2d314d;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
+}
+
+.header__toggle > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+/*----Menu Hamburguesa----*/
+/* .panel.active {
+    transform: translate(0, 0);
+} */
+.menu__container-mobile{
+  width: 100vw;
+  left: 0;
+  right: 0;
+  top: 65px;
+  bottom: 0;
+  height: calc(100vh - 65px);
+  overflow: hidden;
+  transform: translate(0, -100%);
+}
+
+.menu__mobile {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(255,255,255, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.menu__container-mobile
+.menu__mobile
+li {
+  width: 100%;
+}
+
+.menu__container-mobile
+.menu__mobile
+li > a.mobile__links {
+  display: block;
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--second-color);
+  transition: all 0.3s ease;
+}
+
+
+
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
